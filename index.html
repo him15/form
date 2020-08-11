@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Interview Schedule
+	</title>
+
+	<!-- -------------------Links--------------------------------- -->
+	<link rel="stylesheet" type="text/css" href="css/des.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+		<!-- Font link -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- ends -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+
+	<!-- ..........................links................................ -->
+
+
+</head>
+<body>
+
+<!-- ---------------------Contact Section--------------- -->
+<section class="container-fluid bg">
+
+	<section class="row justify-content-center">
+		<section class="col-12 col-sm-6 col-md-8 inside">
+			<form class="form-container ">
+				<h1 id="headr">Interview Schedule</h1>
+				<br><br>
+				<div class="form-group">
+					<h4 class="mb-3 lavel" >Company/Industry Name:</h4>
+					<!-- <label for="firstName" class="lavel" >Company/Industry Name:</label> -->
+					<input type="text" class="form-control" name="" id="firstName" required>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-6">
+						<label for="date" class="lavel" >Date :</label>
+						<input type="date" class="form-control" name="" id="date" required>
+					</div>
+
+					<div class="col-sm-6">
+						<label for="place" class="lavel" >Place :</label>
+						<input type="text" class="form-control" name="" id="place" required>
+					</div>
+				</div><br>
+
+				<div class="form-group">
+					<label for="lastName" class="lavel" >Type of Company/Industy : </label>
+					<select id="company-name" class="form-control" required>
+						<option value="">Choose....</option>
+						<option value="Core Electronic">Core Electronic</option>
+						<option value="Service Sector">Service Sector</option>
+						<option value="Software">Software </option>
+						<option value="Sales and Marketing">Sales and Marketing</option>
+						<option value="Electronic Manufacturing">Electronic Manufacturing</option>
+						<option value="">other</option>
+						
+					</select>
+				</div><br>
+
+				<div class="row">
+					<div class="col-sm-6">
+						<label for="Email" class="lavel" >Email :</label>
+						<input type="email" class="form-control" name="" id="Email" required>
+					</div>
+
+					<div class="col-sm-6">
+						<label for="phone" class="lavel" >Contact No:</label>
+						<input type="phone" class="form-control" name="" id="phone" required>
+					</div>
+				</div><br>
+				<!-- <hr class="my-4"> -->
+				
+				<hr class="my-4">
+
+				<h4 class="mb-3 lavel">Qualified Rounds!</h4>
+					<div class="form-check">
+						<input id="round1" type="radio" class="form-check-input " name="round" checked required>
+						<label for="round1" class="lavel">Round 1</label>
+					</div>
+					<div class="form-check">
+						<input id="round2" type="radio" class="form-check-input " name="round" checked required>
+						<label for="round2" class="lavel">Round 2</label>
+					</div>
+					<div class="form-check">
+						<input id="round3" type="radio" class="form-check-input " name="round" checked required>
+						<label for="round3" class="lavel">Round 3</label>
+					</div>
+					<div class="form-check">
+						<input id="round4" type="radio" class="form-check-input " name="round" checked required>
+						<label for="round4" class="lavel">Round 4</label>
+					</div>
+					<div class="form-check">
+						<input id="round5" type="radio" class="form-check-input " name="round" checked required>
+						<label for="round5" class="lavel">Round 5</label>
+					</div><br>
+
+					<!-- ------------------Questions ---------------------- -->
+					<div class="form-group">
+						<h4 class="mb-3 lavel">Technical Questions Asked :</h4>
+						<input type="text" class="form-control" name="" id="" placeholder="Question 1"><br>
+						<input type="text" class="form-control" name="" id="" placeholder="Question 2"><br>
+						<input type="text" class="form-control" name="" id="" placeholder="Question 3"><br>
+						<input type="text" class="form-control" name="" id="" placeholder="Question 4"><br>
+						<input type="text" class="form-control" name="" id="" placeholder="Question 5">
+					</div><br><br>
+
+					<div class="form-group">
+						<h4 class="mb-3 lavel">Formal Questions Asked :</h4>
+						<input type="text" class="form-control" name="" id="" placeholder="Question 1"><br>
+						<input type="text" class="form-control" name="" id="" placeholder="Question 2"><br>
+						<input type="text" class="form-control" name="" id="" placeholder="Question 3"><br>
+						<input type="text" class="form-control" name="" id="" placeholder="Question 4"><br>
+						<input type="text" class="form-control" name="" id="" placeholder="Question 5">
+					</div><br><br>
+
+					<div class="form-group">
+						<h4 class="mb-3 lavel">Question Unable to Answer :</h4>
+						<input type="text" class="form-control" name="" id="" placeholder="Question 1"><br>
+						<input type="text" class="form-control" name="" id="" placeholder="Question 2"><br>
+						<input type="text" class="form-control" name="" id="" placeholder="Question 3"><br>
+						<input type="text" class="form-control" name="" id="" placeholder="Question 4"><br>
+						<input type="text" class="form-control" name="" id="" placeholder="Question 5">
+					</div><br><br>
+
+					<!-- --------------------Rate experience------------------ -->
+
+					<h4 class="mb-3 lavel">Rate Your Experience</h4>
+					<div class="form-check">
+						<input id="rate" type="radio" class="form-check-input " name="round"  required>
+						<label for="rate" class="lavel">Excellent</label>
+					</div>
+					<div class="form-check">
+						<input id="rate" type="radio" class="form-check-input " name="round"  checked required>
+						<label for="round2" class="lavel">Very-good</label>
+					</div>
+					<div class="form-check">
+						<input id="rate" type="radio" class="form-check-input " name="round"  required>
+						<label for="rate" class="lavel">good</label>
+					</div>
+					<div class="form-check">
+						<input id="rate" type="radio" class="form-check-input " name="round"  required>
+						<label for="rate" class="lavel">Bad</label>
+					</div>
+					<div class="form-check">
+						<input id="rate" type="radio" class="form-check-input " name="round"  required>
+						<label for="rate" class="lavel">Very bad</label>
+					</div>
+					<div class="form-check">
+						<input id="rate" type="radio" class="form-check-input " name="round"  required>
+						<label for="round5" class="lavel">Worst</label>
+					</div><br>
+
+					<div class="form-group">
+				      <textarea class="form-control" rows="3" id="comment" placeholder="Your Message...."></textarea>
+				    </div><br><br>
+				    <center>
+					<button type="submit" id="btn-smll" class="btn btn-primary ">Submit
+					</button></center>
+
+				</form>
+		</section>
+	</section>
+</section>
+
+
+</body>
+</html>
