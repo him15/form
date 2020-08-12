@@ -14,7 +14,20 @@
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+<style>
+::placeholder {
+  color: red;
+  opacity: 1; /* Firefox */
+}
 
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: red;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: red;
+}
+</style>
 	<!-- ..........................links................................ -->
 
 
@@ -38,11 +51,11 @@
 					<!-- admssion no -->
 				<div class="row">
 					<div class="col-sm-4">
-						<h4 style="color:black;font-size:20px; margin-top:5px;  font-weight: normal;class="mb-3 lavel" >Admission No :</h4>
+						<h4 style="color:black;font-size:20px; margin-top:5px;  font-weight: normal; class="mb-3 lavel"  >Admission No :</h4>
 					</div>
 
 					<div class="col-sm-8">
-						<input type="phone" class="form-control" name="" id="phone" required>
+						<input type="text" class="form-control" name="" id="phone" required>
 					</div>
 		</div><br>
 
@@ -55,8 +68,8 @@
 
 				<div class="row">
 					<div class="col-sm-6">
-						<label for="date" class="lavel" >Date :</label>
-						<input type="date" class="form-control" name="" id="date" required>
+						<label   for="date" class="lavel" >Date :</label>
+						<input id="company-datee" type="date" class="form-control" name="" id="date" required>
 					</div>
 
 					<div class="col-sm-6">
@@ -101,7 +114,7 @@
 
 						<div class="row">
 					<div class="col-sm-10">
-						<textarea class="form-control" rows="2" id="comment" placeholder="Question 1"></textarea>
+						<textarea class="form-control shade" rows="2" id="comment" placeholder="Question 1"></textarea>
 					</div>
 
 					<div class="col-sm-2">
@@ -118,7 +131,7 @@
 						<h4 class="mb-3 lavel">Formal Questions Asked :</h4>
 						<div class="row">
 					<div class="col-sm-10">
-						<textarea class="form-control" rows="2" id="comment" placeholder="Question 1"></textarea>
+						<textarea class="form-control shade" rows="2" id="comment" placeholder="Question 1"></textarea>
 					</div>
 
 					<div class="col-sm-2">
@@ -134,7 +147,7 @@
 						<h4 class="mb-3 lavel">Question Unable to Answer :</h4>
 						<div class="row">
 					<div class="col-sm-10">
-						<textarea class="form-control" rows="2" id="comment" placeholder="Question 1"></textarea>
+						<textarea class="form-control shade" rows="2" id="comment" placeholder="Question 1"></textarea>
 					</div>
 
 					<div class="col-sm-2">
@@ -174,7 +187,7 @@
 					</div><br>
 
 					<div class="form-group">
-				      <textarea class="form-control" rows="3" id="comment" placeholder="Your Feedback...."></textarea>
+				      <textarea class="form-control shade" rows="3" id="comment" placeholder="Your Feedback...."></textarea>
 				    </div><br><br>
 				    <center>
 					<button type="submit" id="btn-smll" class="btn btn-primary ">Submit
