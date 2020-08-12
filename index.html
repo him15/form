@@ -27,12 +27,18 @@
 	<section class="row justify-content-center">
 		<section class="col-12 col-sm-6 col-md-6 inside">
 			<form class="form-container ">
-				<h1 id="headr">Interview Schedule</h1>
-				<br><br>
+				<h1 id="headr">Interview Schedule</h1><br>
+
+
+				<div class="form-group">
+						<p class="mb-3" id="heading" style="color: black;">Please fill the form below to add your details in your placement tracker<p>
+				</div>
+
+				<hr class="my-5" >
 					<!-- admssion no -->
 				<div class="row">
 					<div class="col-sm-4">
-						<h4 style="color:black;font-size:25px; class="mb-3 lavel" >Admission No :</h4>
+						<h4 style="color:black;font-size:20px; margin-top:5px;  font-weight: normal;class="mb-3 lavel" >Admission No :</h4>
 					</div>
 
 					<div class="col-sm-8">
@@ -42,7 +48,7 @@
 
 
 				<div class="form-group">
-					<h4 style="color:black;font-size:22px; class="mb-3 lavel" >Company/Industry Name:</h4>
+					<h4 style="color:black;font-size:19px; font-weight: normal; class="mb-3 lavel" >Company/Industry Name:</h4>
 					<!-- <label for="firstName" class="lavel" >Company/Industry Name:</label> -->
 					<input type="text" class="form-control" name="" id="firstName" required>
 				</div>
@@ -73,42 +79,46 @@
 					</select>
 				</div><br>
 
+				<div class="form-group">
+					<label for="lastName" class="lavel" >Eligibility Criteria : </label>
+					<input type="text" class="form-control" name="" id="place" required>
+				</div><br>
+
 				
 				<!-- <hr class="my-4"> -->
 				
-				<hr class="my-4">
+				<!-- <hr class="my-4"> -->
 
-				<h4 class="mb-3 lavel">Qualified Rounds!</h4>
+				<h3 class="mb-3 lavel">Selection Process</h3>
 					<input type="text" class="form-control" name="" id="" placeholder="Round 1"><br>
 						<input type="text" class="form-control" name="" id="" placeholder="Round 2"><br>
 						<input type="text" class="form-control" name="" id="" placeholder="Round 3"><br>
-						<input type="text" class="form-control" name="" id="" placeholder="Round 4"><br>
+						<input type="text" class="form-control" name="" id="" placeholder="Round 4"><br><br><br>
 
-					<!-- ------------------Questions ---------------------- -->
+					<!-- --------------	TECHNICAL QUESTIONS ---------------------- -->
 					<div class="form-group">
 						<h4 class="mb-3 lavel">Technical Questions Asked :</h4>
 
 						<div class="row">
 					<div class="col-sm-10">
-						<input type="text" class="form-control" name="" id="" placeholder="Question 1">
+						<textarea class="form-control" rows="2" id="comment" placeholder="Question 1"></textarea>
 					</div>
 
 					<div class="col-sm-2">
 						<center>
-						<button type="submit"  class="btn btn-primary ">Add</button>
+					<button type="submit" class="btn btn-primary">Add</button>
 						</center>
 					</div>
 				</div>
+			</div><br><br>
 
 
-
-					</div><br><br>
-
+			<!-- ---------------------FORMAL QUESTION---------------------------- -->
 					<div class="form-group">
 						<h4 class="mb-3 lavel">Formal Questions Asked :</h4>
 						<div class="row">
 					<div class="col-sm-10">
-						<input type="text" class="form-control" name="" id="" placeholder="Question 1">
+						<textarea class="form-control" rows="2" id="comment" placeholder="Question 1"></textarea>
 					</div>
 
 					<div class="col-sm-2">
@@ -119,11 +129,12 @@
 				</div>
 					</div><br><br>
 
+			<!-- --------------QUESTION UNABLE TO ANSWER------------------ -->
 					<div class="form-group">
 						<h4 class="mb-3 lavel">Question Unable to Answer :</h4>
 						<div class="row">
 					<div class="col-sm-10">
-						<input type="text" class="form-control" name="" id="" placeholder="Question 1">
+						<textarea class="form-control" rows="2" id="comment" placeholder="Question 1"></textarea>
 					</div>
 
 					<div class="col-sm-2">
@@ -136,7 +147,7 @@
 
 					<!-- --------------------Rate experience------------------ -->
 
-					<h4 class="mb-3 lavel">Rate Your Experience</h4>
+					<h3 class="mb-3 lavel">Rate Your Experience</h3>
 					<div class="form-check">
 						<input id="rate" type="radio" class="form-check-input " name="round"  required>
 						<label for="rate" class="lavel">Excellent</label>
