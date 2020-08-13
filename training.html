@@ -6,7 +6,7 @@
 	</title>
 
 	<!-- -------------------Links--------------------------------- -->
-	<link rel="stylesheet" type="text/css" href="css/des.css">
+	<link rel="stylesheet" type="text/css" href="css/daywise.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
 		<!-- Font link -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- ends -->
@@ -25,157 +25,101 @@
 <section class="container-fluid bg  mobile_view_width_wrap">
 
 	<section class="row justify-content-center  mobile_view_width_wrap">
-		<section class="col-lg-6 col-sm-11 col-md-11 inside">
+		<section class="col-lg-5 col-sm-10 col-md-11 inside">
 			<form class="form-container ">
-				<h1 id="headr">Interview Schedule</h1><br>
+				<h1 id="headr">Training Schedule</h1><br>
 
 
 				<div class="form-group">
 						<p class="mb-3" id="heading" style="color: black;">Please fill the form below to add your details in your placement tracker<p>
 				</div>
 
-				<hr class="my-5" >
+				<hr class="my-5 new1" >
 					<!-- admssion no -->
-				<div class="row">
-					<div class="col-sm-4">
-						<h4 style="color:black;font-size:20px; margin-top:5px;  font-weight: normal;class="mb-3 lavel" >Admission No :</h4>
-					</div>
-
-					<div class="col-sm-8">
-						<input type="phone" class="form-control" name="" id="phone" required>
-					</div>
-		</div><br>
-
-
-				<div class="form-group">
-					<h4 style="color:black;font-size:19px; font-weight: normal; class="mb-3 lavel" >Company/Industry Name:</h4>
-					<!-- <label for="firstName" class="lavel" >Company/Industry Name:</label> -->
-					<input type="text" class="form-control" name="" id="firstName" required>
-				</div>
-
+				<!--  -->
 				<div class="row">
 					<div class="col-sm-6">
-						<label for="date" class="lavel" >Date :</label>
-						<input type="date" class="form-control" name="" id="date" required>
+						<input type="text" class="form-control shade" placeholder="First Name" name="fname" id="Email" required>
 					</div>
 
 					<div class="col-sm-6">
-						<label for="place" class="lavel" >Place :</label>
-						<input type="text" class="form-control" name="" id="place" required>
+						<input type="text" class="form-control shade" placeholder="Last Name" name="" id="phone" required>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-sm-12">
+						<input type="text" class="form-control shade" name="" id="admssionno" placeholder="Admission No"  required>
+					</div>
+
+				</div><br>
+				<div class="row">
+					<div class="col-sm-12">
+						<input type="text" class="form-control shade" name="" id="firstName" placeholder="Branch Name" required>
+					</div>
+				</div>
+				<hr class="my-4 new1" >
+
+				<!-- ----------DATE SECTION----------------- -->
+
+				<div class="row">
+					<div class="col-sm-12">
+						<input placeholder="From Date" onfocus="(this.type='date')" id="company-date" type="text" class="form-control" name=""  required>
+					</div>
+				</div><br>
+				<div class="row">
+					<div class="col-sm-12">
+						<input placeholder="Till Date" onfocus="(this.type='date')" id="company-date" type="text" class="form-control" name=""  required>
 					</div>
 				</div><br>
 
-				<div class="form-group">
-					<label for="lastName" class="lavel" >Type of Company/Industy : </label>
-					<select id="company-name" class="form-control" required>
-						<option value="">Choose....</option>
-						<option value="Core Electronic">Core Electronic</option>
-						<option value="Service Sector">Service Sector</option>
-						<option value="Software">Software </option>
-						<option value="Sales and Marketing">Sales and Marketing</option>
-						<option value="Electronic Manufacturing">Electronic Manufacturing</option>
-						<option value="">other</option>
-						
-					</select>
+
+
+				<div class="row">
+					<div class="col-sm-12">
+						<input type="text" class="form-control shade" name="" id="#" placeholder="Name of Organisation/Industry"  required>
+					</div>
 				</div><br>
 
-				<div class="form-group">
-					<label for="lastName" class="lavel" >Eligibility Criteria : </label>
-					<input type="text" class="form-control" name="" id="place" required>
+
+				<div class="form-group shade">
+				      <textarea class="form-control" rows="3" id="comment" placeholder="Address"></textarea>
+				</div><br>
+
+
+				<div class="row">
+					<div class="col-sm-12">
+						<input type="text" class="form-control shade" name="" id="#" placeholder="Name of General Manager/HR" required>
+					</div>
+
+				</div><br>
+				<div class="row">
+					<div class="col-sm-12">
+						<input type="phone" class="form-control shade" name="" id="#" placeholder="Contact " required>
+					</div>
+
+				</div><br>
+				<div class="row">
+					<div class="col-sm-12">
+						<input type="text" class="form-control shade" name="" id="firstName" placeholder="Department/Division" " required>
+					</div>
+
 				</div><br>
 
 				
-				<!-- <hr class="my-4"> -->
+
+				<div class="form-group shade">
+				      <textarea class="form-control" rows="3" id="comment" placeholder="write about your day..."></textarea>
+				</div><br><br>
+
 				
-				<!-- <hr class="my-4"> -->
-
-				<h3 class="mb-3 lavel">Selection Process</h3>
-					<input type="text" class="form-control" name="" id="" placeholder="Round 1"><br>
-						<input type="text" class="form-control" name="" id="" placeholder="Round 2"><br>
-						<input type="text" class="form-control" name="" id="" placeholder="Round 3"><br>
-						<input type="text" class="form-control" name="" id="" placeholder="Round 4"><br><br><br>
-
-					<!-- --------------	TECHNICAL QUESTIONS ---------------------- -->
-					<div class="form-group">
-						<h4 class="mb-3 lavel">Technical Questions Asked :</h4>
-
-						<div class="row">
-					<div class="col-sm-10">
-						<textarea class="form-control" rows="2" id="comment" placeholder="Question 1"></textarea>
-					</div>
-
-					<div class="col-sm-2">
-						<center>
-					<button type="submit" class="btn btn-primary">Add</button>
-						</center>
-					</div>
-				</div>
-			</div><br><br>
 
 
-			<!-- ---------------------FORMAL QUESTION---------------------------- -->
-					<div class="form-group">
-						<h4 class="mb-3 lavel">Formal Questions Asked :</h4>
-						<div class="row">
-					<div class="col-sm-10">
-						<textarea class="form-control" rows="2" id="comment" placeholder="Question 1"></textarea>
-					</div>
 
-					<div class="col-sm-2">
-						<center>
-						<button type="submit"  class="btn btn-primary ">Add</button>
-						</center>
-					</div>
-				</div>
-					</div><br><br>
 
-			<!-- --------------QUESTION UNABLE TO ANSWER------------------ -->
-					<div class="form-group">
-						<h4 class="mb-3 lavel">Question Unable to Answer :</h4>
-						<div class="row">
-					<div class="col-sm-10">
-						<textarea class="form-control" rows="2" id="comment" placeholder="Question 1"></textarea>
-					</div>
 
-					<div class="col-sm-2">
-						<center>
-						<button type=""  class="btn btn-primary ">Add</button>
-						</center>
-					</div>
-				</div>
-					</div><br><br>
-
-					<!-- --------------------Rate experience------------------ -->
-
-					<h3 class="mb-3 lavel">Rate Your Experience</h3>
-					<div class="form-check">
-						<input id="rate" type="radio" class="form-check-input " name="round"  required>
-						<label for="rate" class="lavel">Excellent</label>
-					</div>
-					<div class="form-check">
-						<input id="rate" type="radio" class="form-check-input " name="round"  checked required>
-						<label for="round2" class="lavel">Very-good</label>
-					</div>
-					<div class="form-check">
-						<input id="rate" type="radio" class="form-check-input " name="round"  required>
-						<label for="rate" class="lavel">good</label>
-					</div>
-					<div class="form-check">
-						<input id="rate" type="radio" class="form-check-input " name="round"  required>
-						<label for="rate" class="lavel">Bad</label>
-					</div>
-					<div class="form-check">
-						<input id="rate" type="radio" class="form-check-input " name="round"  required>
-						<label for="rate" class="lavel">Very bad</label>
-					</div>
-					<div class="form-check">
-						<input id="rate" type="radio" class="form-check-input " name="round"  required>
-						<label for="round5" class="lavel">Worst</label>
-					</div><br>
-
-					<div class="form-group">
-				      <textarea class="form-control" rows="3" id="comment" placeholder="Your Feedback...."></textarea>
-				    </div><br><br>
+				
+				
 				    <center>
 					<button type="submit" id="btn-smll" class="btn btn-primary ">Submit
 					</button></center>
@@ -197,7 +141,7 @@
 
 <!-- <div class="row">
 					<div class="col-sm-6">
-						<label for="Email" class="lavel" >Email :</label>
+						<label for="Email" class="lavel" >First Name :</label>
 						<input type="email" class="form-control" name="" id="Email" required>
 					</div>
 
