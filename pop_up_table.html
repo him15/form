@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Table</title>
+
+<link rel="stylesheet" type="text/css" href="css/des.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+    body {
+        color: #404E67;
+        background: #F5F7FA;
+		font-family: 'Open Sans', sans-serif;
+	}
+	.table-wrapper {
+		width: 700px;
+		margin: 30px auto;
+        background: #fff;
+        padding: 20px;	
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    }
+    .table-title {
+        padding-bottom: 10px;
+        margin: 0 0 10px;
+    }
+    .table-title h2 {
+        margin: 6px 0 0;
+        font-size: 22px;
+    }
+    .table-title .add-new {
+        float: right;
+		height: 30px;
+		font-weight: bold;
+		font-size: 12px;
+		text-shadow: none;
+		min-width: 100px;
+		border-radius: 50px;
+		line-height: 13px;
+    }
+	.table-title .add-new i {
+		margin-right: 4px;
+	}
+    table.table {
+        table-layout: fixed;
+    }
+    table.table tr th, table.table tr td {
+        border-color: #e9e9e9;
+    }
+    table.table th i {
+        font-size: 13px;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+    table.table th:last-child {
+        width: 100px;
+    }
+    table.table td a {
+		cursor: pointer;
+        display: inline-block;
+        margin: 0 5px;
+		min-width: 24px;
+    }    
+	table.table td a.add {
+        color: #27C46B;
+    }
+    table.table td a.edit {
+        color: #FFC107;
+    }
+    table.table td a.delete {
+        color: #E34724;
+    }
+    table.table td i {
+        font-size: 19px;
+    }
+	table.table td a.add i {
+        font-size: 24px;
+    	margin-right: -1px;
+        position: relative;
+        top: 3px;
+    }    
+    table.table .form-control {
+        height: 32px;
+        line-height: 32px;
+        box-shadow: none;
+        border-radius: 2px;
+    }
+	table.table .form-control.error {
+		border-color: #f50000;
+	}
+	table.table td .add {
+		display: none;
+	}
+</style>
+<script>
+$(document).ready(function(){
+	$('[data-toggle="tooltip"]').tooltip();
+	var actions = $("table td:last-child").html()
+
+    ;
+	
+	//------------------- Delete Button Code Starts -------------------------------------
+        	$(document).on("click", ".delete", function(){
+                $(this).parents("tr").remove();
+        		$(".add-new").removeAttr("disabled");
+            });
+    // --------------------Code ends----------------------
+
+
+});
+</script>
+</head>
+<body>
+    <div class="container">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-8"><h2><b>Placement Tracker</b></h2></div>
+                    <div class="col-sm-4">
+                       <button class="btn btn-info add-new" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i>Add New</button>
+                    </div>
+
+    <!-------------------------------------------- POP UP DATA-------------------------- -->
+                                     <!-- The Modal -->
+                      <div class="modal fade" id="myModal">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                          
+                            <!-- Modal Header -->
+                            <!-- Modal Header -->
+                          <div class="modal-header ">  
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h4 class="modal-title row"><b>Add New</b></h4>
+                                </div>
+
+                                <div class="col-sm-6">
+                                   <button type="button" style="margin-top: -5px;"  class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                            <!-- Modal body -->
+                                    <div class="modal-body">
+                                            <form class="form-container ">
+                <h1 id="headr">Interview Schedule</h1><br>
+
+
+                <div class="form-group">
+                        <p class="mb-3" id="heading" style="color: black;">Please fill the form below to add your details in your placement tracker<p>
+                </div>
+
+                <hr class="my-5" >
+                    <!-- admssion no -->
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h4 style="color:black;font-size:20px; margin-top:5px;  font-weight: normal; class="mb-3 lavel"  >Admission No :</h4>
+                    </div>
+
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" name="" id="phone" required>
+                    </div>
+        </div><br>
+
+
+                <div class="form-group">
+                    <h4 style="color:black;font-size:19px; font-weight: normal; class="mb-3 lavel" >Company/Industry Name:</h4>
+                    <!-- <label for="firstName" class="lavel" >Company/Industry Name:</label> -->
+                    <input type="text" class="form-control" name="" id="firstName" required>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label   for="date" class="lavel" >Date :</label>
+                        <input id="company-datee" type="date" class="form-control" name="" id="date" required>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="place" class="lavel" >Place :</label>
+                        <input type="text" class="form-control" name="" id="place" required>
+                    </div>
+                </div><br>
+
+                <div class="form-group">
+                    <label for="lastName" class="lavel" >Type of Company/Industy : </label>
+                    <select id="company-name" class="form-control" required>
+                        <option value="">Choose....</option>
+                        <option value="Core Electronic">Core Electronic</option>
+                        <option value="Service Sector">Service Sector</option>
+                        <option value="Software">Software </option>
+                        <option value="Sales and Marketing">Sales and Marketing</option>
+                        <option value="Electronic Manufacturing">Electronic Manufacturing</option>
+                        <option value="">other</option>
+                        
+                    </select>
+                </div><br>
+
+                <div class="form-group">
+                    <label for="lastName" class="lavel" >Eligibility Criteria : </label>
+                    <input type="text" class="form-control" name="" id="place" required>
+                </div><br>
+
+                
+                <!-- <hr class="my-4"> -->
+                
+                <!-- <hr class="my-4"> -->
+
+                <h3 class="mb-3 lavel">Selection Process</h3>
+                    <input type="text" class="form-control" name="" id="" placeholder="Round 1"><br>
+                        <input type="text" class="form-control" name="" id="" placeholder="Round 2"><br>
+                        <input type="text" class="form-control" name="" id="" placeholder="Round 3"><br>
+                        <input type="text" class="form-control" name="" id="" placeholder="Round 4"><br><br><br>
+
+                    <!-- -------------- TECHNICAL QUESTIONS ---------------------- -->
+                    <div class="form-group">
+                        <h4 class="mb-3 lavel">Technical Questions Asked :</h4>
+
+                        <div class="row">
+                    <div class="col-sm-10">
+                        <textarea class="form-control shade" style="box-shadow: 0px 0px 6px 0px #787878; border: 1px solid grey;  rows="2" id="comment" placeholder="Question 1"></textarea>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <center>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                        </center>
+                    </div>
+                </div>
+            </div><br><br>
+
+
+            <!-- ---------------------FORMAL QUESTION---------------------------- -->
+                    <div class="form-group">
+                        <h4 class="mb-3 lavel">Formal Questions Asked :</h4>
+                        <div class="row">
+                    <div class="col-sm-10">
+                        <textarea class="form-control shade" style="box-shadow: 0px 0px 6px 0px #787878; border: 1px solid grey;  rows="2" id="comment" placeholder="Question 1"></textarea>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <center>
+                        <button type="submit"  class="btn btn-primary ">Add</button>
+                        </center>
+                    </div>
+                </div>
+                    </div><br><br>
+
+            <!-- --------------QUESTION UNABLE TO ANSWER------------------ -->
+                    <div class="form-group">
+                        <h4 class="mb-3 lavel">Question Unable to Answer :</h4>
+                        <div class="row">
+                    <div class="col-sm-10">
+                        <textarea class="form-control shade" style="box-shadow: 0px 0px 6px 0px #787878; border: 1px solid grey;  rows="2" id="comment" placeholder="Question 1"></textarea>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <center>
+                        <button type=""  class="btn btn-primary ">Add</button>
+                        </center>
+                    </div>
+                </div>
+                    </div><br><br>
+
+                    <!-- --------------------Rate experience------------------ -->
+
+                    <h3 class="mb-3 lavel">Rate Your Experience</h3>
+                    <div class="form-check">
+                        <input id="rate" type="radio" class="form-check-input " name="round"  required>
+                        <label for="rate" class="lavel">Excellent</label>
+                    </div>
+                    <div class="form-check">
+                        <input id="rate" type="radio" class="form-check-input " name="round"  checked required>
+                        <label for="round2" class="lavel">Very-good</label>
+                    </div>
+                    <div class="form-check">
+                        <input id="rate" type="radio" class="form-check-input " name="round"  required>
+                        <label for="rate" class="lavel">good</label>
+                    </div>
+                    <div class="form-check">
+                        <input id="rate" type="radio" class="form-check-input " name="round"  required>
+                        <label for="rate" class="lavel">Bad</label>
+                    </div>
+                    <div class="form-check">
+                        <input id="rate" type="radio" class="form-check-input " name="round"  required>
+                        <label for="rate" class="lavel">Very bad</label>
+                    </div>
+                    <div class="form-check">
+                        <input id="rate" type="radio" class="form-check-input " name="round"  required>
+                        <label for="round5" class="lavel">Worst</label>
+                    </div><br>
+
+                    <div class="form-group">
+                      <textarea class="form-control shade" style="box-shadow: 0px 0px 6px 0px #787878; border: 1px solid grey;" rows="3" id="comment" placeholder="Your Feedback...."></textarea>
+                    </div><br><br>
+                    <center>
+                    <button type="submit" id="btn-smll" class="btn btn-primary ">Submit
+                    </button></center>
+
+                </form>
+
+                                    </div>
+
+                     <!-- Modal footer -->
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>    
+        
+    <!-- ---------------------------END------------------------------- -->
+                </div>
+            </div>
+ 
+   
+            <table class="table table-bordered" style="width: 100%">
+
+                 <colgroup>
+                   <col span="1" style="width: 7%;">
+                   <col span="1" style="width: 20%;">
+                   <col span="1" style="width: 23%;">
+                   <col span="1" style="width: 15%;">
+                   <col span="1" style="width: 20%;">
+                   <col span="1" style="width: 15%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>SNo.</th>
+                        <th>Company Name</th>
+                        <th>Type of Company</th>
+                        <th>Date</th>
+                        <th>Venue</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td>Administration</td>
+                        <td>(171) 555-2222</td>
+                        <td>17/03/2018</td>
+                        <td>dfsd dfsdDelhi</td>
+                        <td>
+							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                            <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Customer Service</td>
+                        <td>(313) 555-5735</td>
+                        <td>17/03/2018</td>
+                        <td>gsd dgsd Delhi</td>
+                        <td>
+							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                            <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>      
+                </tbody>
+            </table>
+        </div>
+    </div>   
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
+</body>
+</html>
