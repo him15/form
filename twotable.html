@@ -22,6 +22,7 @@
 	.table-wrapper {
 		width: 700px;
 		margin: 30px auto;
+        margin-top: -10px;
         background: #fff;
         padding: 20px;	
         box-shadow: 0 1px 1px rgba(0,0,0,.05);
@@ -97,6 +98,10 @@
 	table.table td .add {
 		display: none;
 	}
+    .headng{
+        font-weight: 700;
+        text-align: center;
+    }
 </style>
 <script>
 $(document).ready(function(){
@@ -118,16 +123,22 @@ $(document).ready(function(){
 </head>
 <body>
     <div class="container">
+        <h1 class="headng">Training Tracker</h1>
+
+    <!-- ---------------------------------1st Table---------------------------- -->
+
+
+
         <section class="table-responsive">
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-8"><h2><b>Placement Tracker</b></h2></div>
+                    <div class="col-sm-8"><h2>Placement Tracker</h2></div>
                     <div class="col-sm-4">
                        <button class="btn btn-info add-new" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i>Add New</button>
                     </div>
 
-    <!-------------------------------------------- POP UP DATA-------------------------- -->
+    <!------------------------(Trainig Schedule form )POP UP DATA-------------------------- -->
                                      <!-- The Modal -->
                       <div class="modal fade" id="myModal">
                         <div class="modal-dialog modal-dialog-centered">
@@ -142,7 +153,7 @@ $(document).ready(function(){
                                 </div>
 
                                 <div class="col-sm-6">
-                                   <button type="button" style="margin-top: -5px;"  class="close" data-dismiss="modal">&times;</button>
+                                   <button type="button"   class="close" data-dismiss="modal">&times;</button>
                                 </div>
                             </div>
 
@@ -353,7 +364,7 @@ $(document).ready(function(){
                         <td>dfsd dfsdDelhi</td>
                         <td>
 							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                            <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a class="edit" title="Edit" data-toggle="modal" data-target="#myModal" ><i class="material-icons">&#xE254;</i></a>
                             <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
                     </tr>
@@ -365,7 +376,218 @@ $(document).ready(function(){
                         <td>gsd dgsd Delhi</td>
                         <td>
 							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                            <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a class="edit" title="Edit" data-toggle="modal" data-target="#myModal"><i class="material-icons">&#xE254;</i></a>
+                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>      
+                </tbody>
+            </table>
+        </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+ <!-- ------------------------TABLE 2 DATA----------------------------- -->
+
+
+
+        <h3 style="text-align: center;">Daywise Report</h3>
+        <section class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-8"><h2>Placement Tracker</h2></div>
+                    <div class="col-sm-4">
+                       <button class="btn btn-info add-new" data-toggle="modal" data-target="#dayModal"><i class="fa fa-plus"></i>Add New</button>
+                    </div>
+
+                  <!--------------------(Daywise Report form) POP UP DATA------------------->
+
+
+                                     <!-- The Modal -->
+                      <div class="modal fade" id="dayModal">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                          
+                            <!-- Modal Header -->
+                            <!-- Modal Header -->
+                          <div class="modal-header ">  
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h4 class="modal-title row"><b>Add New</b></h4>
+                                </div>
+
+                                <div class="col-sm-6">
+                                   <button type="button" style="margin-top: -5px;"  class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                            <!-- Modal body -->
+            <div class="modal-body">
+                    <form class="form-container ">
+                <h1 id="headr">Daywise Detailed Report</h1><br>
+
+
+                <div class="form-group">
+                        <p class="mb-3" id="heading" style="color: black;">Please fill the form below to add your details in your placement tracker<p>
+                </div>
+
+                <hr class="my-5 new1" >
+                    <!-- admssion no -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control shade" name="" id="firstName" placeholder="Admission No" " required>
+                    </div>
+
+                </div><br>
+
+
+
+                <div class="form-group">
+                    <label for="lastName" class="lavel" >Select your day</label>
+                    <select id="company-name" class="form-control shade" required>
+                        <option value="">Choose...</option>
+                        <option value="Day 1">Day 1</option>
+                        <option value="Day 2">Day 2</option>
+                        <option value="Day 3">Day 3</option>
+                        <option value="Day 4">Day 4</option>
+                        <option value="Day 5">Day 5</option>
+                        <option value="Day 6">Day 6</option>
+                        <option value="Day 7">Day 7</option>
+                        <option value="Day 8">Day 8</option>
+                        <option value="Day 9">Day 9</option>
+                        <option value="Day 10">Day 10</option>
+                        <option value="Day 11">Day 11</option>
+                        <option value="Day 12">Day 12</option>
+                        <option value="Day 13">Day 13</option>
+                        <option value="Day 14">Day 14</option>
+                        <option value="Day 15">Day 15</option>
+                        <option value="Day 16">Day 16</option>
+                        <option value="Day 17">Day 17</option>
+                        <option value="Day 18">Day 18</option>
+                        <option value="Day 19">Day 19</option>
+                        <option value="Day 20">Day 20</option>
+                        <option value="Day 21">Day 21</option>
+                        <option value="Day 22">Day 22</option>
+                        <option value="Day 23">Day 23</option>
+                        <option value="Day 24">Day 24</option>
+                        <option value="Day 25">Day 25</option>
+                        <option value="Day 26">Day 26</option>
+                        <option value="Day 27">Day 27</option>
+                        <option value="Day 28">Day 28</option>
+                        <option value="Day 29">Day 29</option>
+                        <option value="Day 30">Day 30</option>
+                        <option value="Day 31">Day 31</option>
+                        
+                    </select>
+                </div><br>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control shade" name="" id="firstName" placeholder="Name of Training" " required>
+                    </div>
+
+                </div><br>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control shade" name="" id="firstName" placeholder="Email of Trainer/Supervisor " required>
+                    </div>
+
+                </div><br>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control shade" name="" id="firstName" placeholder="Department/Division" " required>
+                    </div>
+
+                </div><br>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input placeholder="Date" onfocus="(this.type='date')" id="company-date" type="text" class="form-control" name=""  required>
+                    </div>
+
+                </div><br>
+
+                <div class="form-group shade">
+                      <textarea class="form-control" rows="3" id="comment" placeholder="write about your day..."></textarea>
+                    </div><br><br>
+
+                
+                     <center>
+                    <button type="submit" id="btn-smll" class="btn btn-primary ">Submit
+                    </button></center>
+
+                </form>
+
+                                    </div>
+
+                     <!-- Modal footer -->
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>    
+        
+    <!-- ---------------------------END------------------------------- -->
+                </div>
+            </div>
+ 
+   
+            <table class="table table-bordered" style="width: 100%">
+
+                 <colgroup>
+                   <col span="1" style="width: 7%;">
+                   <col span="1" style="width: 20%;">
+                   <col span="1" style="width: 23%;">
+                   <col span="1" style="width: 15%;">
+                   <col span="1" style="width: 20%;">
+                   <col span="1" style="width: 15%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>SNo.</th>
+                        <th>Company Name</th>
+                        <th>Type of Company</th>
+                        <th>Date</th>
+                        <th>Venue</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td>Administration</td>
+                        <td>(171) 555-2222</td>
+                        <td>17/03/2018</td>
+                        <td>dfsd dfsdDelhi</td>
+                        <td>
+                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                            <a class="edit" title="Edit" data-toggle="modal" data-target="#dayModal"><i class="material-icons">&#xE254;</i></a>
+                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Customer Service</td>
+                        <td>(313) 555-5735</td>
+                        <td>17/03/2018</td>
+                        <td>gsd dgsd Delhi</td>
+                        <td>
+                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                           <a class="edit" title="Edit" data-toggle="modal" data-target="#dayModal"><i class="material-icons">&#xE254;</i></a>
                             <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
                     </tr>      
