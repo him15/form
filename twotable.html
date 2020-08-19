@@ -53,6 +53,7 @@
     }
     table.table tr th, table.table tr td {
         border-color: #e9e9e9;
+        text-align: center;
     }
     table.table th i {
         font-size: 13px;
@@ -102,6 +103,7 @@
         font-weight: 700;
         text-align: center;
     }
+
 </style>
 <script>
 $(document).ready(function(){
@@ -133,7 +135,7 @@ $(document).ready(function(){
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-8"><h2>Placement Tracker</h2></div>
+                    <div class="col-sm-8"><h2>Training Schedule</h2></div>
                     <div class="col-sm-4">
                        <button class="btn btn-info add-new" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i>Add New</button>
                     </div>
@@ -162,158 +164,98 @@ $(document).ready(function(){
 
 
                             <!-- Modal body -->
-                                    <div class="modal-body">
-                                            <form class="form-container ">
-                <h1 id="headr">Interview Schedule</h1><br>
+             <div class="modal-body">
+            <form class="form-container ">
+                <h1 id="headr">Training Schedule</h1><br>
 
 
                 <div class="form-group">
                         <p class="mb-3" id="heading" style="color: black;">Please fill the form below to add your details in your placement tracker<p>
                 </div>
 
-                <hr class="my-5" >
+                <hr class="my-5 new1" >
                     <!-- admssion no -->
-                <div class="row">
-                    <div class="col-sm-4">
-                        <h4 style="color:black;font-size:20px; margin-top:5px;  font-weight: normal; class="mb-3 lavel"  >Admission No :</h4>
-                    </div>
-
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control" name="" id="phone" required>
-                    </div>
-        </div><br>
-
-
-                <div class="form-group">
-                    <h4 style="color:black;font-size:19px; font-weight: normal; class="mb-3 lavel" >Company/Industry Name:</h4>
-                    <!-- <label for="firstName" class="lavel" >Company/Industry Name:</label> -->
-                    <input type="text" class="form-control" name="" id="firstName" required>
-                </div>
-
+                <!--  -->
                 <div class="row">
                     <div class="col-sm-6">
-                        <label   for="date" class="lavel" >Date :</label>
-                        <input id="company-datee" type="date" class="form-control" name="" id="date" required>
+                        <input type="text" class="form-control shade" placeholder="First Name" name="fname" id="#" required>
                     </div>
 
                     <div class="col-sm-6">
-                        <label for="place" class="lavel" >Place :</label>
-                        <input type="text" class="form-control" name="" id="place" required>
+                        <input type="text" class="form-control shade" placeholder="Last Name" name="" id="#" required>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control shade" name="" id="#" placeholder="Admission No"  required>
+                    </div>
+
+                </div><br>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control shade" name="" id="#" placeholder="Branch Name" required>
+                    </div>
+                </div>
+                <hr class="my-4 new1" >
+
+                <!-- ----------DATE SECTION----------------- -->
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input placeholder="From Date" onfocus="(this.type='date')" id="company-date" type="text" class="form-control" name=""  required>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input placeholder="Till Date" onfocus="(this.type='date')" id="company-date" type="text" class="form-control" name=""  required>
                     </div>
                 </div><br>
 
-                <div class="form-group">
-                    <label for="lastName" class="lavel" >Type of Company/Industy : </label>
-                    <select id="company-name" class="form-control" required>
-                        <option value="">Choose....</option>
-                        <option value="Core Electronic">Core Electronic</option>
-                        <option value="Service Sector">Service Sector</option>
-                        <option value="Software">Software </option>
-                        <option value="Sales and Marketing">Sales and Marketing</option>
-                        <option value="Electronic Manufacturing">Electronic Manufacturing</option>
-                        <option value="">other</option>
-                        
-                    </select>
+
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control shade" name="" id="#" placeholder="Name of Organisation/Industry"  required>
+                    </div>
                 </div><br>
 
-                <div class="form-group">
-                    <label for="lastName" class="lavel" >Eligibility Criteria : </label>
-                    <input type="text" class="form-control" name="" id="place" required>
+
+                <div class="form-group shade">
+                      <textarea class="form-control" rows="3" id="#" placeholder="Address"></textarea>
                 </div><br>
 
-                
-                <!-- <hr class="my-4"> -->
-                
-                <!-- <hr class="my-4"> -->
 
-                <h3 class="mb-3 lavel">Selection Process</h3>
-                    <input type="text" class="form-control" name="" id="" placeholder="Round 1"><br>
-                        <input type="text" class="form-control" name="" id="" placeholder="Round 2"><br>
-                        <input type="text" class="form-control" name="" id="" placeholder="Round 3"><br>
-                        <input type="text" class="form-control" name="" id="" placeholder="Round 4"><br><br><br>
-
-                    <!-- -------------- TECHNICAL QUESTIONS ---------------------- -->
-                    <div class="form-group">
-                        <h4 class="mb-3 lavel">Technical Questions Asked :</h4>
-
-                        <div class="row">
-                    <div class="col-sm-10">
-                        <textarea class="form-control shade" style="box-shadow: 0px 0px 6px 0px #787878; border: 1px solid grey;  rows="2" id="comment" placeholder="Question 1"></textarea>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control shade" name="" id="#" placeholder="Name of General Manager/HR" required>
                     </div>
 
-                    <div class="col-sm-2">
-                        <center>
-                    <button type="submit" class="btn btn-primary">Add</button>
-                        </center>
-                    </div>
-                </div>
-            </div><br><br>
-
-
-            <!-- ---------------------FORMAL QUESTION---------------------------- -->
-                    <div class="form-group">
-                        <h4 class="mb-3 lavel">Formal Questions Asked :</h4>
-                        <div class="row">
-                    <div class="col-sm-10">
-                        <textarea class="form-control shade" style="box-shadow: 0px 0px 6px 0px #787878; border: 1px solid grey;  rows="2" id="comment" placeholder="Question 1"></textarea>
+                </div><br>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input type="phone" class="form-control shade" style="border: 1px solid grey; box-shadow: 0px 0px 6px 0px #787878;" name="" id="#" placeholder="Contact " required>
                     </div>
 
-                    <div class="col-sm-2">
-                        <center>
-                        <button type="submit"  class="btn btn-primary ">Add</button>
-                        </center>
-                    </div>
-                </div>
-                    </div><br><br>
-
-            <!-- --------------QUESTION UNABLE TO ANSWER------------------ -->
-                    <div class="form-group">
-                        <h4 class="mb-3 lavel">Question Unable to Answer :</h4>
-                        <div class="row">
-                    <div class="col-sm-10">
-                        <textarea class="form-control shade" style="box-shadow: 0px 0px 6px 0px #787878; border: 1px solid grey;  rows="2" id="comment" placeholder="Question 1"></textarea>
+                </div><br>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control shade" name="" id="#" placeholder="Office Incharge of Training Industry" required>
                     </div>
 
-                    <div class="col-sm-2">
-                        <center>
-                        <button type=""  class="btn btn-primary ">Add</button>
-                        </center>
-                    </div>
-                </div>
-                    </div><br><br>
+                </div><br>
 
-                    <!-- --------------------Rate experience------------------ -->
 
-                    <h3 class="mb-3 lavel">Rate Your Experience</h3>
-                    <div class="form-check">
-                        <input id="rate" type="radio" class="form-check-input " name="round"  required>
-                        <label for="rate" class="lavel">Excellent</label>
-                    </div>
-                    <div class="form-check">
-                        <input id="rate" type="radio" class="form-check-input " name="round"  checked required>
-                        <label for="round2" class="lavel">Very-good</label>
-                    </div>
-                    <div class="form-check">
-                        <input id="rate" type="radio" class="form-check-input " name="round"  required>
-                        <label for="rate" class="lavel">good</label>
-                    </div>
-                    <div class="form-check">
-                        <input id="rate" type="radio" class="form-check-input " name="round"  required>
-                        <label for="rate" class="lavel">Bad</label>
-                    </div>
-                    <div class="form-check">
-                        <input id="rate" type="radio" class="form-check-input " name="round"  required>
-                        <label for="rate" class="lavel">Very bad</label>
-                    </div>
-                    <div class="form-check">
-                        <input id="rate" type="radio" class="form-check-input " name="round"  required>
-                        <label for="round5" class="lavel">Worst</label>
-                    </div><br>
+    <!-- -----------------RATE YOUR EXPERIENCE-------------------- -->
 
-                    <div class="form-group">
-                      <textarea class="form-control shade" style="box-shadow: 0px 0px 6px 0px #787878; border: 1px solid grey;" rows="3" id="comment" placeholder="Your Feedback...."></textarea>
-                    </div><br><br>
-                    <center>
+
+                <label   for="date" class="lavel" style="font-weight: 500;">Rate your Experience </label>
+
+                <!-- -------------For Star Code Here -------------- -->
+
+
+
+                <center>
                     <button type="submit" id="btn-smll" class="btn btn-primary ">Submit
                     </button></center>
 
@@ -335,23 +277,23 @@ $(document).ready(function(){
             </div>
  
    
-            <table class="table table-bordered" style="width: 100%">
+            <table class="table table-bordered table-striped table-hover" style="width: 100%">
 
                  <colgroup>
                    <col span="1" style="width: 7%;">
-                   <col span="1" style="width: 20%;">
-                   <col span="1" style="width: 23%;">
-                   <col span="1" style="width: 15%;">
-                   <col span="1" style="width: 20%;">
+                   <col span="1" style="width: 25%;">
+                   <col span="1" style="width: 25%;">
+                   <col span="1" style="width: 14%;">
+                   <col span="1" style="width: 14%;">
                    <col span="1" style="width: 15%;">
                 </colgroup>
                 <thead>
                     <tr>
                         <th>SNo.</th>
-                        <th>Company Name</th>
-                        <th>Type of Company</th>
-                        <th>Date</th>
-                        <th>Venue</th>
+                        <th>Name of Organisation</th>
+                        <th>Address</th>
+                        <th>From Date</th>
+                        <th>To Date</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -359,9 +301,9 @@ $(document).ready(function(){
                     <tr>
                         <td>1.</td>
                         <td>Administration</td>
-                        <td>(171) 555-2222</td>
+                        <td>555-2222</td>
                         <td>17/03/2018</td>
-                        <td>dfsd dfsdDelhi</td>
+                        <td>37/03/2018</td>
                         <td>
 							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
                             <a class="edit" title="Edit" data-toggle="modal" data-target="#myModal" ><i class="material-icons">&#xE254;</i></a>
@@ -373,7 +315,7 @@ $(document).ready(function(){
                         <td>Customer Service</td>
                         <td>(313) 555-5735</td>
                         <td>17/03/2018</td>
-                        <td>gsd dgsd Delhi</td>
+                        <td>17/03/2018</td>
                         <td>
 							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
                             <a class="edit" title="Edit" data-toggle="modal" data-target="#myModal"><i class="material-icons">&#xE254;</i></a>
@@ -398,12 +340,12 @@ $(document).ready(function(){
 
 
 
-        <h3 style="text-align: center;">Daywise Report</h3>
+        
         <section class="table-responsive">
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-8"><h2>Placement Tracker</h2></div>
+                    <div class="col-sm-8"><h2>Daywise Report</h2></div>
                     <div class="col-sm-4">
                        <button class="btn btn-info add-new" data-toggle="modal" data-target="#dayModal"><i class="fa fa-plus"></i>Add New</button>
                     </div>
@@ -455,8 +397,8 @@ $(document).ready(function(){
 
 
                 <div class="form-group">
-                    <label for="lastName" class="lavel" >Select your day</label>
-                    <select id="company-name" class="form-control shade" required>
+                    <label for="lastName"  class="lavel" >Select your day</label>
+                    <select id="company-name" style="box-shadow: 0px 0px 6px 0px #787878;" class="form-control shade" required>
                         <option value="">Choose...</option>
                         <option value="Day 1">Day 1</option>
                         <option value="Day 2">Day 2</option>
@@ -546,23 +488,21 @@ $(document).ready(function(){
             </div>
  
    
-            <table class="table table-bordered" style="width: 100%">
+            <table class="table table-bordered table-striped table-hover" style="width: 100%">
 
                  <colgroup>
-                   <col span="1" style="width: 7%;">
-                   <col span="1" style="width: 20%;">
-                   <col span="1" style="width: 23%;">
-                   <col span="1" style="width: 15%;">
-                   <col span="1" style="width: 20%;">
-                   <col span="1" style="width: 15%;">
+                   <col span="1" style="width: 14%;">
+                   <col span="1" style="width: 25%;">
+                   <col span="1" style="width: 25%;">
+                   <col span="1" style="width: 18%;">
+                   <col span="1" style="width: 18%;">
                 </colgroup>
                 <thead>
                     <tr>
-                        <th>SNo.</th>
-                        <th>Company Name</th>
-                        <th>Type of Company</th>
+                        <th>Day</th>
+                        <th>Name of Training</th>
+                        <th>Department/Division</th>
                         <th>Date</th>
-                        <th>Venue</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -572,7 +512,6 @@ $(document).ready(function(){
                         <td>Administration</td>
                         <td>(171) 555-2222</td>
                         <td>17/03/2018</td>
-                        <td>dfsd dfsdDelhi</td>
                         <td>
                             <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
                             <a class="edit" title="Edit" data-toggle="modal" data-target="#dayModal"><i class="material-icons">&#xE254;</i></a>
@@ -584,7 +523,6 @@ $(document).ready(function(){
                         <td>Customer Service</td>
                         <td>(313) 555-5735</td>
                         <td>17/03/2018</td>
-                        <td>gsd dgsd Delhi</td>
                         <td>
                             <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
                            <a class="edit" title="Edit" data-toggle="modal" data-target="#dayModal"><i class="material-icons">&#xE254;</i></a>
