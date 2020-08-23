@@ -33,7 +33,7 @@
 		font-family: 'Open Sans', sans-serif;
 	}
 	.table-wrapper {
-		width: 700px;
+		width: 770px;
 		margin: 30px auto;
         background: #fff;
         padding: 20px;	
@@ -121,9 +121,19 @@
 	}
 
 	.newsty{
-		margin-left: -6%;
-		margin-right:  -6%; 
+		margin-left: -1%;
+		margin-right:  -1%; 
 	}
+
+    .shades{
+        padding: 12px 20px;
+  margin: 1px 0;
+  box-sizing: border-box;
+  border: 1px solid grey;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px 0px #787878;
+    box-sizing: border-box;
+    }
 </style>
 
 	<script>
@@ -132,29 +142,16 @@ $(document).ready(function(){
 	var actions = $("table td:last-child").html();
 
 
-	// Append table with add row form of FIRST TABLE  on add new button click
-    $(".add-new1").click(function(){
-		$(this).attr("disabled", "disabled");
-		var index = $("table tbody tr:last-child").index();
-        var row = '<tr>' +
-            '<td><input type="text" class="form-control" name="name" id="name"></td>' +
-            '<td><input type="text" class="form-control" name="department" id="department"></td>' +
-            '<td><input type="text" class="form-control" name="phone" id="phone"></td>' +
-			'<td>' + actions + '</td>' +
-        '</tr>';
-    	$("table").append(row);		
-		$("table tbody tr").eq(index + 1).find(".add, .edit").toggle();
-        $('[data-toggle="tooltip"]').tooltip();
-    });
-
     // Append table with add row form of SECOND TABLE on add new button click
     $(".add-new").click(function(){
 		$(this).attr("disabled", "disabled");
 		var index = $("table tbody tr:last-child").index();
         var row = '<tr>' +
             '<td><input type="text" class="form-control" name="name" id="name"></td>' +
-            '<td><input type="text" class="form-control" name="department" id="department"></td>' +
-            '<td><input type="text" class="form-control" name="phone" id="phone"></td>' +
+            '<td><input type="text" class="form-control" name="name" id="roll"></td>'+
+            '<td><input type="text" class="form-control" name="name" id="contact"></td>'+
+            '<td><input type="text" class="form-control" name="department" id="hostler"></td>' +
+            '<td><input type="text" class="form-control" name="phone" id="email"></td>' +
 			'<td>' + actions + '</td>' +
         '</tr>';
     	$("table").append(row);		
@@ -210,52 +207,78 @@ $(document).ready(function(){
 <h1 style="font-weight: 800; font-size: 50px; text-align: center; margin-top: 20px; ">Project Tracker</h1>
 <!-- ----------------------FORM -------------------------------------- -->
 	<section class="row justify-content-center  mobile_view_width_wrap newsty">
-		<section class="col-lg-7 col-sm-12 col-md-11 inside">
+		<section class="col-lg-8 col-sm-11 col-md-11 inside">
 			<form class="newstyle">
 			  <div style="margin-top: 25px;">
 				<div class="row">
-					<div class="col-sm-4">
-						<h4 style="color:black;font-size:20px; margin-top:5px;  font-weight: normal; class="mb-3 lavel"  >Admission No :</h4>
+					<div class="col-sm-4 col-lg-4">
+						<h4 style="color:black;font-size:20px; margin-top:5px;  font-weight: normal; class="mb-3 lavel"  >Project Name :</h4>
 					</div>
 
-					<div class="col-sm-8">
+					<div class="col-sm-8 col-lg-8 " ">
 						<input type="text" class="form-control" name="" id="phone" required>
 					</div>
 				</div><br>
 
+                <div class="row">
+                    <div class="col-sm-4 col-lg-4">
+                        <h4 style="color:black;font-size:20px; margin-top:5px;  font-weight: normal; class="mb-3 lavel"  >Guides :</h4>
+                    </div>
 
-				<div class="form-group">
-					<h4 style="color:black;font-size:19px; font-weight: normal; class="mb-3 lavel" >Company/Industry Name:</h4>
-					<!-- <label for="firstName" class="lavel" >Company/Industry Name:</label> -->
-					<input type="text" class="form-control" name="" id="firstName" required>
-				</div>
+                    <div class="col-sm-8 col-lg-8 " ">
+                        <input type="text" class="form-control " name="" id="phone" required>
+                    </div>
+                </div><br>
 
-				<div class="row">
-					<div class="col-sm-6">
-						<label   for="date" class="lavel" >Date :</label>
-						<input id="company-datee" type="date" class="form-control" name="" id="date" required>
-					</div>
 
-					<div class="col-sm-6">
-						<label for="place" class="lavel" >Place :</label>
-						<input type="text" class="form-control" name="" id="place" required>
-					</div>
-				</div><br>
+
+
+
+                <div class="row">
+                    <div class="col-sm-4 col-lg-4">
+                        <h4 style="color:black;font-size:20px; margin-top:5px;  font-weight: normal; class="mb-3 lavel"  >Project Abstract :</h4>
+                    </div>
+
+                    <div class="col-sm-8 col-lg-8 " ">
+                       <textarea class="form-control shades" rows="3" id="comment" placeholder="Project Abstract"></textarea>
+                    </div>
+                </div><br>
+
+
+                <div class="row">
+                    <div class="col-sm-4 col-lg-4">
+                        <h4 style="color:black;font-size:20px; margin-top:5px;  font-weight: normal; class="mb-3 lavel"  >Findings :</h4>
+                    </div>
+
+                    <div class="col-sm-8 col-lg-8 " ">
+                       <textarea class="form-control shades" rows="3" id="comment" placeholder="Findings"></textarea>
+                    </div>
+                </div><br>
+
+
+                <div class="row">
+                    <div class="col-sm-4 col-lg-4">
+                        <h4 style="color:black;font-size:20px; margin-top:5px;  font-weight: normal; class="mb-3 lavel"  >Final Outcomes :</h4>
+                    </div>
+
+                    <div class="col-sm-8 col-lg-8 " ">
+                       <textarea class="form-control shades" rows="3" id="comment" placeholder="Final Outcomes "></textarea>
+                    </div>
+                </div><br>
+
+
+
+                <div class="form-group">
+                    <h4 style="color:black;font-size:19px; font-weight: normal; class="mb-3 lavel" >Final outcome:</h4>
+                    <textarea class="form-control shades" rows="3" id="comment" placeholder="Project Abstract"></textarea>
+                </div>
+
+
+
 
 				
-
-				<div class="form-group">
-					<label for="lastName" class="lavel" >Eligibility Criteria : </label>
-					<input type="text" class="form-control" name="" id="place" required>
-				</div><br>
-
-			
-
-					<div class="form-group">
-				      <textarea class="form-control shade" rows="3" id="comment" placeholder="Your Feedback...."></textarea>
-				    </div><br><br>
 				    <center>
-					<button type="submit" id="btn-smll" class="btn btn-primary ">Submit
+					<button type="submit" id="btn-smll" style="margin-top: 5%;" class="btn btn-primary ">Submit
 					</button></center>
 				  </div>
 				</form>
@@ -267,7 +290,7 @@ $(document).ready(function(){
 <!-- -------------------FIRST TABLE----------------------------------------- -->
  
  	
-    	<section class="table-responsive ">
+    	<section class="table-responsive " style="margin-top: 2%;">
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
@@ -278,41 +301,57 @@ $(document).ready(function(){
                 </div>
             </div>
             <table class="table table-bordered">
+                <colgroup>
+                   <col span="1" style="width: 14%;">
+                   <col span="1" style="width: 16%;">
+                   <col span="1" style="width: 16%;">
+                   <col span="1" style="width: 20%;">
+                   <col span="1" style="width: 19%;">
+                   <col span="1" style="width: 12%;">
+                </colgroup>
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Department</th>
+                        <th>Roll No</th>
                         <th>Phone</th>
+                        <th>Hostler/Dayscholar</th>
+                        <th>Email-id</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>John Doe</td>
+                        <td>Administr</td>
+                        <td>(171) 555-2222</td>
                         <td>Administration</td>
                         <td>(171) 555-2222</td>
                         <td>
-							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">send</i></a>
                             <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                             <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
                     </tr>
                     <tr>
                         <td>Peter Parker</td>
-                        <td>Customer Service</td>
+                        <td>Customer </td>
                         <td>(313) 555-5735</td>
+                        <td>Administration</td>
+                        <td>(171) 555-2222</td>
                         <td>
-							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">send</i></a>
                             <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                             <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
                     </tr>
                     <tr>
                         <td>Fran Wilson</td>
-                        <td>Human Resources</td>
+                        <td>Human </td>
                         <td>(503) 555-9931</td>
+                        <td>Administration</td>
+                        <td>(171) 555-2222</td>
                         <td>
-							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">send</i></a>
                             <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                             <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
@@ -321,67 +360,6 @@ $(document).ready(function(){
             </table>
         </div>
     </section>    
-
-
-
-
-<!-- ----------------------------------SECOND TABLE----------------------------- -->
-	<section class="table-responsive">
-        <div class="table-wrapper">
-            <div class="table-title">
-                <div class="row">
-                    <div class="col-sm-8"><h2>Project Status <b>Report</b></h2></div>
-                    <div class="col-sm-4">
-                        <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button>
-                    </div>
-                </div>
-            </div>
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Department</th>
-                        <th>Phone</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>John Doe</td>
-                        <td>Administration</td>
-                        <td>(171) 555-2222</td>
-                        <td>
-							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                            <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Peter Parker</td>
-                        <td>Customer Service</td>
-                        <td>(313) 555-5735</td>
-                        <td>
-							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                            <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Fran Wilson</td>
-                        <td>Human Resources</td>
-                        <td>(503) 555-9931</td>
-                        <td>
-							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                            <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>      
-                </tbody>
-            </table>
-        </div>
-   	 </section>
-   	</div>
-
 
 </body>
 </html>
